@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import it.redhat.demo.api.CiaoService;
+import it.redhat.hello.api.HelloService;
 import org.ops4j.pax.exam.Configuration;
 import org.ops4j.pax.exam.ConfigurationManager;
 import org.ops4j.pax.exam.Option;
@@ -23,10 +23,10 @@ import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.karafDist
 import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.keepRuntimeFolder;
 
 @RunWith(PaxExam.class)
-public class ServiceConsumerTest {
+public class BundleConsumerTest {
 
 	@Inject
-	private CiaoService service;
+	private HelloService service;
 
 	@Configuration
 	public Option[] config() {
@@ -54,7 +54,7 @@ public class ServiceConsumerTest {
 				features(karafStandardRepo , "scr"),
 				mavenBundle()
 						.groupId("it.redhat.demo")
-						.artifactId("blueprint-service-producer")
+						.artifactId("blueprint-bundle-producer")
 						.version( "1.0-SNAPSHOT" ).start(),
 				//logLevel( LogLevelOption.LogLevel.TRACE ),
 		};
