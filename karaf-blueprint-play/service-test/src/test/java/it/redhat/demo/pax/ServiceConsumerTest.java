@@ -7,11 +7,12 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import it.redhat.demo.api.CiaoService;
+import it.redhat.hello.api.HelloService;
 import org.ops4j.pax.exam.Configuration;
 import org.ops4j.pax.exam.ConfigurationManager;
 import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.junit.PaxExam;
+import org.ops4j.pax.exam.karaf.options.LogLevelOption;
 import org.ops4j.pax.exam.options.MavenArtifactUrlReference;
 import org.ops4j.pax.exam.options.MavenUrlReference;
 
@@ -21,12 +22,13 @@ import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.configure
 import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.features;
 import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.karafDistributionConfiguration;
 import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.keepRuntimeFolder;
+import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.logLevel;
 
 @RunWith(PaxExam.class)
 public class ServiceConsumerTest {
 
 	@Inject
-	private CiaoService service;
+	private HelloService service;
 
 	@Configuration
 	public Option[] config() {
@@ -56,6 +58,7 @@ public class ServiceConsumerTest {
 						.groupId("it.redhat.demo")
 						.artifactId("blueprint-service-producer")
 						.version( "1.0-SNAPSHOT" ).start(),
+				logLevel( LogLevelOption.LogLevel.TRACE ),
 		};
 	}
 
