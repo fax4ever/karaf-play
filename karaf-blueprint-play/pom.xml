@@ -27,5 +27,6 @@
         <module>service-producer</module>
         <module>service-test</module>
         <module>bundle-producer</module>
+        <module>blueprint-producer</module>
     </modules>
 </project>

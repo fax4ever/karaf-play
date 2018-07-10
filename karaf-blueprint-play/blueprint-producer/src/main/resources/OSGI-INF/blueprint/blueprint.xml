@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+  <bean id="blueServiceImpl" class="it.redhat.blue.impl.BlueServiceImpl"/>
+  <service ref="blueServiceImpl" interface="it.redhat.blue.api.BlueService"/>
+
+</blueprint>

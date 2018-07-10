@@ -32,6 +32,13 @@
 
         <dependency>
             <groupId>it.redhat.demo</groupId>
+            <artifactId>blueprint-producer</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>it.redhat.demo</groupId>
             <artifactId>blueprint-bundle-producer</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
