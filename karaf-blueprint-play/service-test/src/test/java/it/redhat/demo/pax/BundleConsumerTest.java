@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import it.redhat.hello.api.EchoService;
 import it.redhat.hello.api.HelloService;
 import org.ops4j.pax.exam.Configuration;
 import org.ops4j.pax.exam.ConfigurationManager;
@@ -27,6 +28,9 @@ public class BundleConsumerTest {
 
 	@Inject
 	private HelloService service;
+
+	@Inject
+	private EchoService echo;
 
 	@Configuration
 	public Option[] config() {
@@ -69,6 +73,12 @@ public class BundleConsumerTest {
 	@Test
 	public void testCiao() {
 		String ciao = service.ciao( "Fabio" );
+		Assert.assertNotNull( ciao );
+	}
+
+	@Test
+	public void testEcho() {
+		String ciao = echo.mirrorMe( "Fabio" );
 		Assert.assertNotNull( ciao );
 	}
 }
