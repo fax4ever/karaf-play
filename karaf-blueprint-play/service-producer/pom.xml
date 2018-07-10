@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>karaf-blueprint-play</artifactId>
+        <groupId>it.redhat.demo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>blueprint-service-producer</artifactId>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <index>true</index>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                        <manifestEntries>
+                            <Implementation-Title>blueprint-service-producer</Implementation-Title>
+                            <Automatic-Module-Name>it.redhat.demo.serviceproducer</Automatic-Module-Name>
+                            <Bundle-SymbolicName>it.redhat.demo.serviceproducer</Bundle-SymbolicName>
+                            <Implementation-Version>1.0-SNAPSHOT</Implementation-Version>
+                            <Bundle-ManifestVersion>2</Bundle-ManifestVersion>
+                            <Specification-Vendor>it.redhat.demo</Specification-Vendor>
+                            <Specification-Title>service-producer</Specification-Title>
+                            <Implementation-Vendor-Id>it.redhat.demo</Implementation-Vendor-Id>
+                            <Bundle-Vendor>it.redhat.demo</Bundle-Vendor>
+                            <Export-Package>it.redhat.demo.api</Export-Package>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

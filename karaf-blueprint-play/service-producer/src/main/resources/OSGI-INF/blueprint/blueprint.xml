@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+  <bean id="ciaoServiceImpl" class="it.redhat.demo.impl.CiaoServiceImpl"/>
+  <service ref="ciaoServiceImpl" interface="it.redhat.demo.api.CiaoService"/>
+
+</blueprint>

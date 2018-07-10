@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>it.redhat.demo</groupId>
+    <artifactId>karaf-blueprint-play</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!--<apache.karaf.version>4.2.0</apache.karaf.version>
+        <osgi.version>6.0.0</osgi.version>
+        <pax.exams.version>4.12.0</pax.exams.version>
+        <pax.url.version>2.5.4</pax.url.version>-->
+
+        <apache.karaf.version>3.0.3</apache.karaf.version>
+        <osgi.version>4.3.1</osgi.version>
+        <pax.exams.version>4.4.0</pax.exams.version>
+        <pax.url.version>2.4.1</pax.url.version>
+    </properties>
+
+    <modules>
+        <module>service-producer</module>
+        <module>service-test</module>
+    </modules>
+</project>
