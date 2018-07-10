@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import it.redhat.hello.api.HelloService;
+import it.redhat.demo.api.CiaoService;
 import org.ops4j.pax.exam.Configuration;
 import org.ops4j.pax.exam.ConfigurationManager;
 import org.ops4j.pax.exam.Option;
@@ -28,7 +28,7 @@ import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.logLevel;
 public class ServiceConsumerTest {
 
 	@Inject
-	private HelloService service;
+	private CiaoService service;
 
 	@Configuration
 	public Option[] config() {
