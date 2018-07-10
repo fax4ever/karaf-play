@@ -10,17 +10,11 @@
     <packaging>pom</packaging>
 
     <properties>
-        <!--<apache.karaf.version>4.2.0</apache.karaf.version>
+        <apache.karaf.version>4.1.0</apache.karaf.version>
         <osgi.version>6.0.0</osgi.version>
         <osgi.compendium.version>5.0.0</osgi.compendium.version>
         <pax.exams.version>4.12.0</pax.exams.version>
-        <pax.url.version>2.5.4</pax.url.version>-->
-
-        <apache.karaf.version>3.0.3</apache.karaf.version>
-        <osgi.version>4.3.1</osgi.version>
-        <osgi.compendium.version>4.3.1</osgi.compendium.version>
-        <pax.exams.version>4.4.0</pax.exams.version>
-        <pax.url.version>2.4.1</pax.url.version>
+        <pax.url.version>2.5.4</pax.url.version>
     </properties>
 
     <modules>
